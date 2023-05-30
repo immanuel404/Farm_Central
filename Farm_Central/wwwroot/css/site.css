@@ -1,0 +1,74 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: radial-gradient(circle, #e1dff9, #dcd9fa, #d6d3fa, #d1cdfb, #ccc7fb);
+    background-image: linear-gradient(to top, #9b93f4, #9da1f5, #a2aff5, #aabbf3, #b6c7f0, #bbd0f1, #c3d9f1, #cee1f1, #d3e9f5, #d9f1f8, #e2f8fb, #ebfffe);
+    margin-bottom: 100px;
+}
+
+
+.register_form, .login_form {
+    width: 35%;
+    margin: 50px auto;
+    align-items: center;
+}
+
+
+.add_product, .add_farmer {
+    width: 35%;
+    margin: 50px auto;
+    align-items: center;
+}
+
+
+.productlist_filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.filterByType, .filterByDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    .filterByType input, .filterByDate input {
+        margin: 5px 0px;
+    }
+
+
+@media only screen and (max-width: 900px) {
+    .register_form, .login_form {
+        width: 70%;
+        margin: 50px auto;
+        align-items: center;
+    }
+
+    .add_product, .add_farmer {
+        width: 70%;
+        margin: 50px auto;
+        align-items: center;
+    }
+
+    .productlist_filter {
+        flex-direction: column;
+    }
+}

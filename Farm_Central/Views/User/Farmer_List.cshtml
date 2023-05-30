@@ -1,0 +1,65 @@
+﻿@model List<Farm_Central.Models.User>
+
+@{
+    ViewData["Title"] = "Farmer's List";
+}
+
+@*Navbar*@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Farm Central</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="ms-auto">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+                    </li>
+                    <li class="ml-auto">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Farmer_List">Farmer's List</a>
+                    </li>
+                    <li class="ml-auto">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Farmer_Add">Add Farmer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+@if(TempData["msg"] != null)
+{
+    <div class="alert alert-primary" role="alert">
+        @TempData["msg"]
+    </div>
+}
+
+<div>
+@*Farmers Listed-Table*@
+<h1>List of Farmers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var farmer in Model)
+        {
+            <tr>
+                <td>@farmer.Name</td>
+                <td>@farmer.Surname</td>
+                <td>@farmer.Email</td>
+                <td><a href="../Product/Product_List/@farmer.Id">View Products</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
