@@ -45,7 +45,4 @@ allowing farmers to detail produce available for sale. Built with ASP.NET-MVC, S
 
 - When running unit tests, 'Test_Mode' variable in controllers must be set to true.
 
-
 <br /><br />
-![](screenshot.png)
-
