@@ -1,29 +1,10 @@
-==========================
-
-** FARM CENTRAL WEB-APP **
-
-==========================
-
-
-<br />
 ==> ABOUT:
 
-- Web-app for the management of farm produce for produce wholesaler,
-allowing farmers to detail produce available for sale. Built with ASP.NET-MVC, SQL, & Bootstrap.
-
-- Features: CRUD operations, Data filtering, Authentication, Cookies, & Unit Tests.
+- Built with ASP.NET MVC, MS SQL, Bootstrap - Allows the wholesalers to manage farm produce inventory.
 
 
 <br />
-==> TECHNOLOGIES:
-
-- ASP.NET Core-V6 Web-App (Model-View-Controller).
-
-- Database: Microsoft SQL Server Management Studio.
-
-
-<br />
-==> INITIAL SET-UP & DATA POPULATION:
+==> INITIAL SET-UP & SEEDING:
 
 - Once in visual studio, Select Tools->Nuget Package Manager->Package Manager Console.
 
